@@ -988,6 +988,59 @@
   @media(max-width:1000px){.halloween-relic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   @media(max-width:620px){.halloween-relic-grid{grid-template-columns:1fr}}
 
+
+  /* Weiss: visual glacial claro com contraste adequado entre títulos, campos e painéis. */
+  body[data-theme="weiss"]{
+    --good:#28754f;
+    --warn:#99661e;
+    --danger:#b53d50;
+    --info:#286c95;
+    color:var(--text);
+  }
+  body[data-theme="weiss"] .topbar{
+    background:rgba(248,252,255,.97);
+    box-shadow:0 10px 28px rgba(62,85,101,.13);
+  }
+  body[data-theme="weiss"] .sheet,
+  body[data-theme="weiss"] .panel,
+  body[data-theme="weiss"] .drawer,
+  body[data-theme="weiss"] .modal{color:var(--text)}
+  body[data-theme="weiss"] .brand-mark span{
+    color:#233a4d;
+    text-shadow:none;
+  }
+  body[data-theme="weiss"] .eyebrow,
+  body[data-theme="weiss"] .attribute-card label,
+  body[data-theme="weiss"] .battle-summary-kicker,
+  body[data-theme="weiss"] .affinity-name,
+  body[data-theme="weiss"] .ability-section-title h3,
+  body[data-theme="weiss"] .skill-total,
+  body[data-theme="weiss"] .trained-skill-bonus,
+  body[data-theme="weiss"] .attack-damage,
+  body[data-theme="weiss"] .portrait-placeholder b,
+  body[data-theme="weiss"] .portrait-control output,
+  body[data-theme="weiss"] .library-prereq b,
+  body[data-theme="weiss"] .data-card-sub,
+  body[data-theme="weiss"] .tag.accent{color:var(--accent2)}
+  body[data-theme="weiss"] .data-card-body,
+  body[data-theme="weiss"] .rich-preview,
+  body[data-theme="weiss"] .library-desc{color:var(--text)}
+  body[data-theme="weiss"] .library-status.bad,
+  body[data-theme="weiss"] .item-warning,
+  body[data-theme="weiss"] .item-badge.overload{color:#a22b40}
+  body[data-theme="weiss"] .quick-skill-roll,
+  body[data-theme="weiss"] .portrait-adjustments-icon{color:var(--accent2)}
+  body[data-theme="weiss"] select option{
+    color:#233a4d;
+    background:#fbfdff;
+  }
+  body[data-theme="weiss"] .sheet-head{
+    background:linear-gradient(90deg,rgba(130,195,225,.15),rgba(250,252,255,.86) 58%,transparent);
+  }
+  body[data-theme="weiss"] .panel-head{
+    background:linear-gradient(90deg,rgba(132,185,209,.10),transparent 78%);
+  }
+
 </style>
 </head>
 <body>
@@ -2178,7 +2231,7 @@
     const themes={
       ruby:{bg:'#08090d',bg2:'#110d12',bg3:'#06070a',panel:'#151018',panel2:'#1d151e',panel3:'#291b25',line:'#54303a',lineSoft:'rgba(190,72,88,.22)',text:'#fff4f5',muted:'#c4a9ad',accent:'#d92f43',accent2:'#ff7686',ink:'#ffffff',glowA:'#d92f43',glowB:'#7b1021',shadow:'0 24px 70px rgba(0,0,0,.40)',scheme:'dark'},
       yang:{bg:'#0c0905',bg2:'#171106',bg3:'#080603',panel:'#1c160a',panel2:'#271d0d',panel3:'#342713',line:'#665025',lineSoft:'rgba(224,165,45,.22)',text:'#fff8e8',muted:'#c8b78c',accent:'#e0a52d',accent2:'#ffd76a',ink:'#241700',glowA:'#f1b72e',glowB:'#c86618',shadow:'0 24px 70px rgba(0,0,0,.42)',scheme:'dark'},
-      weiss:{bg:'#f2f5f7',bg2:'#e2e8ec',bg3:'#ccd7de',panel:'#f8fafb',panel2:'#edf1f4',panel3:'#dfe7ec',line:'#aab8c2',lineSoft:'rgba(119,151,170,.26)',text:'#20313b',muted:'#687b87',accent:'#9bcfe2',accent2:'#dff6ff',ink:'#17323d',glowA:'#b8e4f1',glowB:'#d7e4eb',shadow:'0 24px 62px rgba(70,91,106,.18)',scheme:'light'},
+      weiss:{bg:'#eef4f8',bg2:'#e3edf3',bg3:'#d5e4ef',panel:'#fbfdff',panel2:'#f0f6fa',panel3:'#e4f0f6',line:'#9cb8c9',lineSoft:'rgba(84,129,157,.30)',text:'#233a4d',muted:'#506a7a',accent:'#286f94',accent2:'#235a7a',ink:'#ffffff',glowA:'#b8e4f1',glowB:'#d7e4eb',shadow:'0 24px 62px rgba(70,91,106,.18)',scheme:'light'},
       blake:{bg:'#08070b',bg2:'#100c17',bg3:'#050407',panel:'#15101d',panel2:'#1e1729',panel3:'#2a2038',line:'#4d3b67',lineSoft:'rgba(137,93,191,.23)',text:'#f8f2ff',muted:'#b9a9c8',accent:'#7956c7',accent2:'#b99cff',ink:'#ffffff',glowA:'#7956c7',glowB:'#31164d',shadow:'0 24px 70px rgba(0,0,0,.44)',scheme:'dark'},
       rosabella:{bg:'#26111d',bg2:'#302044',bg3:'#081630',panel:'#24172f',panel2:'#30203f',panel3:'#3a294d',line:'#8a506f',lineSoft:'rgba(244,106,177,.28)',text:'#fff4fa',muted:'#d3b5cb',accent:'#ff8a3d',accent2:'#f45bae',ink:'#ffffff',glowA:'#ff8a3d',glowB:'#f45bae',shadow:'0 24px 78px rgba(4,8,24,.52)',scheme:'dark'},
       amber:{bg:'#140704',bg2:'#251005',bg3:'#080201',panel:'#241006',panel2:'#351708',panel3:'#48220d',line:'#75401d',lineSoft:'rgba(255,180,43,.24)',text:'#fff5df',muted:'#d3b37d',accent:'#f07a24',accent2:'#ffd34e',ink:'#2b1300',glowA:'#ffb52e',glowB:'#d92f17',shadow:'0 24px 76px rgba(28,7,0,.52)',scheme:'dark'},
